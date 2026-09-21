@@ -3,7 +3,7 @@
 A robust, scalable, and secure RESTful API built with Node.js, Express.js, and MongoDB, serving as the backend for the NextShop e-commerce platform. Designed with performance, security, and maintainability in mind.
 
 🔗 **Frontend Repository:** [NextShop-Fullstack](https://github.com/zeiadkh/NextShop-Fullstack)  
-🌐 **Live API:** *(Add your Render/Vercel backend URL here if deployed, otherwise remove this line)*
+🌐 **Live API:** (https://e-commerce-taa2.onrender.com)
 
 ## ✨ Key Features
 - **Secure Authentication:** JWT-based authentication with Role-Based Access Control (RBAC) for users and admins.
