@@ -5,13 +5,13 @@ import Product from "../../../DB/models/product.model.js";
 import { createInvoice } from "../../utils/createPdfInvoice.js";
 import { fileURLToPath } from "url";
 import path from "path";
+import { unlink } from 'node:fs/promises';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 import cloudinary from "cloudinary";
 import { clearCart, updateStock } from "./order.sevice.js";
 import catchError from "../../utils/catchError.js";
 import { sendEmail } from "../../utils/sendEmail.js";
-import { unlink } from 'node:fs/promises';
 import Stripe from "stripe";
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FrontUrl =  "https://next-ecommerce-five-mu.vercel.app"
 
 export const create = async (req, res, next) => {
@@ -72,6 +72,7 @@ export const create = async (req, res, next) => {
     __dirname,
     `./../../../tempInvoices/${order._id}.pdf`
   );
+  console.log(pdfPath);
 
   const invoice = {
     shipping: {
