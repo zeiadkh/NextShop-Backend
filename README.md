@@ -1,46 +1,53 @@
-# Project Description:
-I recently worked on an e-commerce application that aimed to provide a seamless shopping experience for users. The app was built using modern web technologies to ensure responsiveness, speed, and ease of use. It included essential features of an e-commerce platform, such as product browsing, cart management, secure payments, and order management.
-## LiveDemo: https://next-ecommerce-five-mu.vercel.app/
-![Portfolio Website](https://res.cloudinary.com/dtp47o37p/image/upload/v1712935855/Screenshot_2024-04-11_031251_c5fbkq.png)
-### Features:
-1. Stripe Payment Integration:
-   - Enabled customers to securely make payments using credit/debit cards.
-   - Implemented Stripe's API to handle payment processing and transactions.
+# 🛒 NextShop - Backend API
 
-2. Order Management:
-   - Users could easily place orders for products they selected.
-   - Each order was assigned a unique invoice, detailing the products, prices, and total amount.
+A robust, scalable, and secure RESTful API built with Node.js, Express.js, and MongoDB, serving as the backend for the NextShop e-commerce platform. Designed with performance, security, and maintainability in mind.
 
-3. Email Notifications:
-   - Automatic generation of invoices for each order.
-   - Sent order invoices to users via email for their reference and record-keeping.
+🔗 **Frontend Repository:** [NextShop-Fullstack](https://github.com/zeiadkh/NextShop-Fullstack)  
+🌐 **Live API:** *(Add your Render/Vercel backend URL here if deployed, otherwise remove this line)*
 
-4. User Authentication (JWT):
-   - Implemented JWT (JSON Web Tokens) for secure user authentication.
-   - Users could create accounts, log in securely, and manage their profiles.
+## ✨ Key Features
+- **Secure Authentication:** JWT-based authentication with Role-Based Access Control (RBAC) for users and admins.
+- **Payment Processing:** Secure Stripe integration for handling checkout sessions, webhooks, and order finalization.
+- **Database Optimization:** Advanced MongoDB schema design with strategic indexing and URL-based pagination for fast catalog retrieval, even at scale.
+- **Order & Cart Management:** Comprehensive API endpoints for cart operations, coupon validation, and order lifecycle tracking.
+- **Media Handling:** Secure file uploads integrated with Cloudinary for product images.
 
-5. Basic E-commerce Functionality:
-   - Product browsing with categories and search functionality.
-   - Adding products to the cart and managing the cart items.
-   - Checkout process with order summary and shipping details.
+## 🛠️ Tech Stack
+- **Runtime & Framework:** Node.js, Express.js
+- **Database:** MongoDB, Mongoose
+- **Authentication:** JWT, bcryptjs
+- **Integrations:** Stripe API, Cloudinary, Nodemailer
+- **Tools:** Postman, dotenv, cors, helmet
 
-### Tools and Technologies Used:
-#### - Frontend Development:
-  - Next.js:  React framework for building fast and optimized web applications.
-  - Tailwind CSS:  Utility-first CSS framework for styling with ease and flexibility.
-  - Daisy UI:  Tailwind CSS component library for pre-designed UI components.
+## 🚀 Getting Started Locally
 
-#### - Backend Development:
-  - Node.js: JavaScript runtime for building scalable and efficient server-side applications.
-  - Express.js: Web application framework for Node.js for creating RESTful APIs.
-  - MongoDB: NoSQL database for storing product information, user data, and orders.
-  - Payment Integration:
-      - Stripe: Payment processing platform for handling secure and reliable online transactions.
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/zeiadkh/NextShop-Backend.git
+   cd NextShop-Backend
+2. **Install dependencies:**
+   ```bash
+   npm install
+3. **Set up environment variables**
+   Create a .env file in the root directory and add the following (replace with your actual keys):
+   ```bash
+   PORT=5000
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_super_secret_jwt_key
+   STRIPE_SECRET_KEY=your_stripe_secret_key
+   STRIPE_WEBHOOK_SECRET=your_stripe_webhook_secret
+   CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+   CLOUDINARY_API_KEY=your_cloudinary_key
+   CLOUDINARY_API_SECRET=your_cloudinary_secret
+4. **Run the development server:**
+   ```bash
+   npm run dev
+  The API will be available at http://localhost:5000. 
 
-  - Authentication:
-      - JSON Web Tokens (JWT): Standard for securely transmitting information between parties as JSON objects.
+📂 API Documentation
+  View API Documentation on Postman using the .postman_collection.json file added
+
+🤝 Contributing
+   This is a portfolio project, but the code is structured to reflect production best practices, including error-handling middleware,    controller/service separation, and input validation.
 
 
-In summary, the e-commerce app I worked on was a comprehensive platform built with Next.js and Tailwind CSS on the frontend, Node.js and MongoDB on the backend,
-and integrated with Stripe for secure payments. It provided users with a smooth shopping experience, complete with order management, email notifications, 
-and secure authentication using JWT. The project aimed to deliver a modern and user-friendly e-commerce solution while ensuring scalability, security, and reliability.
